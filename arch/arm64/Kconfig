@@ -188,7 +188,6 @@ config ARCH_MT6735
 	select MTK_SYS_CIRQ
 	select MTK_EIC
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
 	select ARM64_ERRATUM_845719
 	help
 	  This enable support for MediaTek MT6735
@@ -209,7 +208,6 @@ config ARCH_MT6735M
 	select MTK_SYS_CIRQ
 	select MTK_EIC
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
 	select ARM64_ERRATUM_845719
 	help
 	  This enable support for MediaTek MT6735M
@@ -230,7 +228,6 @@ config ARCH_MT6753
 	select MTK_SYS_CIRQ
 	select MTK_EIC
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
 	select ARM64_ERRATUM_845719
 	help
 	  This enable support for MediaTek MT6753
@@ -253,7 +250,6 @@ config ARCH_MT6752
 	select MTK_ETM
 	select MTK_EIC
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
 	select ARM_ERRATA_824069
 	help
 	  This enable support for MediaTek MT6752
@@ -276,7 +272,6 @@ config ARCH_MT8163
 	select MTK_ETM
 	select MTK_EIC
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
 	select ARM_ERRATA_824069
 	help
 	  This enable support for MediaTek MT8163
@@ -302,7 +297,6 @@ config ARCH_MT6795
 	select MTK_EIC
 	select MTK_ETM
 	select ARMV7_COMPAT
-        select ARMV7_COMPAT_CPUINFO
         select MD32_SUPPORT
 	select ARM_ERRATA_824069
 	help
@@ -613,17 +607,6 @@ config ARMV7_COMPAT
 	help
 	 This option enables features that allow that ran on an ARMv7 or older
 	 processor to continue functioning.
-
-	 If you want to execute ARMv7 applications, say Y
-
-config ARMV7_COMPAT_CPUINFO
-	bool "Report backwards compatible cpu features in /proc/cpuinfo"
-	depends on ARMV7_COMPAT
-	default y
-	help
-	 This option makes /proc/cpuinfo list CPU features that an ARMv7 or
-	 earlier kernel would report, but are not optional on an ARMv8 or later
-	 processor.
 
 	 If you want to execute ARMv7 applications, say Y
 
